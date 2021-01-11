@@ -8,6 +8,6 @@
     "socket.io": "^2.3.1"
   },
   "scripts": {
-    "start": "start"
+    "start": "node index.js"
   }
 }
