@@ -1,5 +1,6 @@
 const app = require('express')();
 const http = require('http').Server(app);
+var express = require('express');
 const socket = require('socket.io')(http);
 
 app.use(express.static(path.join('public')))
