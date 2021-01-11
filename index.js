@@ -1,9 +1,8 @@
 const app = require('express')();
 const http = require('http').Server(app);
 var express = require('express');
-const socket = require('socket.io')(http);
+var socket = require('socket.io')(http);
 
-app.use(express.static(path.join('public')))
 app.set('port', (process.env.PORT || 5000))
 
 app.get('/', (req, res) => {
