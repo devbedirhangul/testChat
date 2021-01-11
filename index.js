@@ -3,8 +3,6 @@ const http = require('http').Server(app);
 var express = require('express');
 var socket = require('socket.io')(http);
 
-app.set('port', (process.env.PORT || 5000))
-
 app.get('/', (req, res) => {
     res.send('<h1>Hello world</h1>');
     console.log("selmalar")
@@ -30,6 +28,4 @@ socket.on("connect", (socket) => {
 
 });
 
-http.listen(3000, () => {
-    console.log('listening on *:3000');
-});
+http.listen(process.env.PORT) 
